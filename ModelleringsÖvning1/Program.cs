@@ -34,6 +34,15 @@ namespace ModelleringsÖvning1
             }
         }
 
+        public void MoveRight(Player player) 
+        {
+            ConsoleKeyInfo uInput = Console.ReadKey();
+            if (uInput.Key == ConsoleKey.D)
+            {
+                
+            }
+        }
+
             // public void WriteMap(int what) 
             // {
             //     for (int x = 0; x < 5; x++)
