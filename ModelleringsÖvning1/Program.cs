@@ -29,8 +29,11 @@ namespace ModelleringsÖvning1
             switch (what)
             {
                 case 0:
-                
-                default:
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
             }
         }
     }
