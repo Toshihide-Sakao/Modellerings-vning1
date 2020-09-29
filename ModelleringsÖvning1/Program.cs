@@ -11,9 +11,11 @@ namespace ModelleringsÖvning1
 
             Map grassland = new Map();
 
-            player.x = 1;
-            player.y = 1;
-
+            player.x = 10;
+            player.y = 8;
+            
+            
+            Console.ReadLine();
             StartGame(player, grassland);
 
             while (true)
@@ -94,9 +96,10 @@ namespace ModelleringsÖvning1
 
         public static void RefreshPlayerFromRight(Map map, Player player)
         {
-            Console.SetCursorPosition(player.x, player.y);
+            
             map.positions[player.y, player.x] = 8;
             map.positions[player.oldX, player.oldY] = 10;
+            Console.SetCursorPosition(player.x, player.y);
             Console.Write(map.sprites[10] + map.sprites[8]);
         }
 
@@ -109,6 +112,7 @@ namespace ModelleringsÖvning1
             if (uInput.Key == ConsoleKey.D && player.y < map.positions.GetLength(1) -2)
             {
                 player.y++;
+                RefreshPlayerFromRight(map, player);
             }
             if (uInput.Key == ConsoleKey.A && player.y > 1)
             {
@@ -121,7 +125,7 @@ namespace ModelleringsÖvning1
             if (uInput.Key == ConsoleKey.W && player.x > 1) 
             {
                 player.x--;
-                RefreshPlayerFromRight(map, player);
+                
             }
         }
 
