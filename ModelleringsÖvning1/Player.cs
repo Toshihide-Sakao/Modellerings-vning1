@@ -9,5 +9,6 @@ namespace ModelleringsÖvning1
         public int y;
         public int oldX;
         public int oldY;
+        public string weapon;
     }
 }

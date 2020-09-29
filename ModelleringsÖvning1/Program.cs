@@ -8,11 +8,13 @@ namespace ModelleringsÖvning1
         {
             Map map = new Map();
             Player player = new Player();
+            Items items = new Items();
 
             Map grassland = new Map();
 
             player.x = 10;
             player.y = 8;
+            player.weapon = items.Weapons[0];
             
             
             Console.ReadLine();
